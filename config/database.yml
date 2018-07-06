@@ -1,0 +1,18 @@
+default: &default
+  adapter: postgresql
+  encoding: unicode
+  pool: <%= ENV.fetch("RAILS_MAX_THREADS") { 5 } %>
+
+development:
+  <<: *default
+  database: olio_coding_task_development
+
+test:
+  <<: *default
+  database: olio_coding_task_test
+
+production:
+  <<: *default
+  database: olio_coding_task_production
+  username: olio_coding_task
+  password: <%= ENV['OLIO_CODING_TASK_DATABASE_PASSWORD'] %>
