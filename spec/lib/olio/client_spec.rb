@@ -3,7 +3,7 @@ require './lib/olio/client'
 
 describe Olio::Client do
   subject { described_class.new(base_url) }
-  let(:base_url) { 'https://s3-eu-west-1.amazonaws.com/olio-staging-images/developer/' }
+  let(:base_url) { APP_CONFIG[:olio_base_url] }
   let(:request_url) { base_url + 'articles.json' }
 
   context '#get_articles' do

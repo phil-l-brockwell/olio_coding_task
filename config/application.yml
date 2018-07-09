@@ -1,0 +1,8 @@
+test:
+  olio_base_url: https://s3-eu-west-1.amazonaws.com/olio-staging-images/developer/
+
+development:
+  olio_base_url: https://s3-eu-west-1.amazonaws.com/olio-staging-images/developer/
+
+production:
+  olio_base_url: https://s3-eu-west-1.amazonaws.com/olio-staging-images/developer/

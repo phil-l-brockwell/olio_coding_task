@@ -16,6 +16,6 @@ class ArticlesController < ApplicationController
   private
 
   def olio_client
-    @olio_client ||= Olio::Client.new('https://s3-eu-west-1.amazonaws.com/olio-staging-images/developer/')
+    @olio_client ||= Olio::Client.new(APP_CONFIG[:olio_base_url])
   end
 end
