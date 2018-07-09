@@ -2,6 +2,7 @@ require './lib/olio/client'
 
 class ArticlesController < ApplicationController
   def index
+    @like = Like.new
     response = olio_client.get_articles
 
     if response.success?
