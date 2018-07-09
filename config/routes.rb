@@ -1,5 +1,6 @@
 Rails.application.routes.draw do
-  resource :article, only: [:index]
+  resource :articles, only: [:index]
+  resource :likes, only: [:create]
 
   root to: 'articles#index'
 end
