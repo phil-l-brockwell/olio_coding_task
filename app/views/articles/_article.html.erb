@@ -1,11 +1,10 @@
 <div class='article'>
 	<h2><%= article.title %></h2>
-	<p><%= article.description %></p>
-	<p><%= article.likes %></p>
+	<p><%= likes_string(article) %></p>
 
 	<%= form_for @like do |f| %>
 		<%= hidden_field(:like, :article_id, value: article.id) %>
 
- 		<%= f.submit %>
+ 		<%= f.submit :Like, class: 'submit-button' %>
 	<% end %>
 </div>

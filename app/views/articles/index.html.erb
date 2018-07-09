@@ -1,3 +1,5 @@
-<% @articles.each do |article| %>
-	<%= render 'article', article: article %>
-<% end %>
+<section class='articles'>
+	<% @articles.each do |article| %>
+		<%= render 'article', article: article %>
+	<% end %>
+</section>
