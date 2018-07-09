@@ -9,4 +9,12 @@ describe Article do
       expect(subject.description).to eq(data[:description])
     end
   end
+
+  context '#likes' do
+    it 'returns the count of likes' do
+      2.times { Like.create(article_id: subject.id) }
+
+      expect(subject.likes).to eq(2)
+    end
+  end
 end
